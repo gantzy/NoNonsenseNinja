@@ -2,8 +2,7 @@
   <div class="logo-wrapper">
     <div
       :class="{
-        'logo-inner': true,
-        blink: blinking
+        'logo-inner': true
       }"
     >
       No Nonsense Ninja
