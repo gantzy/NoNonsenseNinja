@@ -1,52 +1,31 @@
 <template>
-  <div id="home-page" class="page-wrapper home-page">
-    <site-hero :title="title" :subtitle="subtitle" :image="featureImage">
-      <button
-        class="button is-primary"
-        @click="$eventBus.$emit('modal-triggered', 'newsletter-modal')"
-      >
-        Subscribe To Newsletter
-      </button>
-    </site-hero>
-    <main-section theme="one-column">
+  <div id="contact-page" class="page-wrapper contact-page content-page">
+    <main-section theme="sidebar-right">
       <template v-slot:default>
-        <!-- All Posts -->
-        <posts-grid />
-      </template>
-      <template v-slot:sidebar>
-        Nothing here
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">
+                Privacy Policy
+              </p>
+              <p class="subtitle">
+                No Nonsense Ninja
+              </p>
+              <br />
+              <div class="content">
+                <p>
+                  GAGames does not collect any personal information from any of
+                  your use of our Apps. If we have any of your personal
+                  information we will not willingly sell or give it to anyone,
+                  except if lawfully subpoenaed to produce it and then only
+                  after offering you a reasonable chance to challenge such
+                  subpoena if allowed by law.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
       </template>
     </main-section>
-    <news-letter-form-modal />
   </div>
 </template>
-
-<script>
-import { mapState } from 'vuex'
-import { setPageData } from '../helper'
-import NewsLetterFormModal from '~/components/NewsLetterFormModal'
-
-export default {
-  name: 'HomePage',
-  head() {
-    return {
-      title: `Home | ${this.$siteConfig.siteName}`
-    }
-  },
-  components: {
-    NewsLetterFormModal
-  },
-  computed: {
-    ...mapState(['title', 'subtitle', 'featureImage'])
-  },
-  fetch({ store, params }) {
-    setPageData(store, { slug: 'home' })
-  }
-}
-</script>
-
-<style>
-.home-page .under-subtitle {
-  border-top: none;
-}
-</style>

@@ -9,38 +9,14 @@ import theCMS from '../cms/netlify/cms'
  * General Site configurations
  */
 export default {
-  siteName: 'Awake',
-  tagline: 'A Nuxt.js Theme for Netlify CMS',
-  featureImage: '/uploads/home-hero.jpg',
+  siteName: 'No Nonsense Ninja',
+  tagline: 'A casual game with your favorite ninja',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
   googleAnalytics: {
     on: true,
     id: process.env.GOOGLE_ANALYTICS_ID
   },
-  mainMenu: [
-    {
-      name: 'About',
-      link: '/about'
-    },
-    {
-      name: 'Contact',
-      link: '/contact'
-    },
-    {
-      name: 'Categories',
-      link: '/categories'
-    },
-    {
-      name: 'Github Repo',
-      link: 'https://github.com/danielkellyio/awake-template',
-      target: '_blank'
-    },
-    {
-      name: 'Awake+ Premium',
-      link: 'https://awake-premium-lp.netlify.com/',
-      target: '_blank'
-    }
-  ],
+  mainMenu: [],
   hero: {
     theme: 'dark' // options: mist, light, dark
   },
@@ -66,7 +42,7 @@ export default {
 
   // Newsletter Subscribe
   newsletter: {
-    on: true,
+    on: false,
     heading: 'Subscribe to Our Newsletter',
     btnText: 'Subscribe',
     // Can be the form action on a mail chimp form, a hubspot form,
@@ -84,7 +60,7 @@ export default {
 
   // Categories
   categories: {
-    on: true,
+    on: false,
     perPage: 6,
     imageDimensions: null, // See card.imageDimensions (can be unique for categories if set here)
     theme: null // See card.theme (can be unique for categories if set here)
@@ -92,7 +68,7 @@ export default {
 
   // Posts
   posts: {
-    on: true,
+    on: false,
     theme: null, // See card.theme (can be unique for posts if set here)
     imageDimensions: null, // See card.imageDimensions (can be unique for posts if set here)
     displayAuthor: true,

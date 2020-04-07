@@ -6,16 +6,7 @@
         blink: blinking
       }"
     >
-      <img
-        v-for="x in frames"
-        :key="x"
-        :src="`/logo-frames/logo-f${x - 1}.svg`"
-      />
-      <img
-        v-for="x in frames"
-        :key="`${x}-r`"
-        :src="`/logo-frames/logo-f${frames - x}.svg`"
-      />
+      No Nonsense Ninja
     </div>
   </div>
 </template>
@@ -47,7 +38,8 @@ export default {
   position: relative;
   height: 50px;
   overflow: hidden;
-  width: 200px;
+  width: 400px;
+  font-size: 32px;
   .logo-inner {
     position: absolute;
     height: 500px;
